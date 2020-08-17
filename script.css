@@ -1,20 +1,28 @@
-.board {
-    margin: 0 auto;
-    border: 1px solid #000;
-    height: 544px;
-    width: 544px;
+:root {
+    --num-boxes: 32;
 }
 
-#row {
-    background-color: transparent;
-    height: 30px;
-    width: 470px;
+.board {
+    display: grid;
+    grid-template-columns: repeat(var(--num-boxes), 1fr);
+    grid-template-rows: repeat(var(--num-boxes), 1fr);
+    margin: 0 auto;
+    border: 1px solid #000;
+    height: 400px;
+    width: 400px;
+}
+
+.clear {
+    display: block;
+    margin: 0 auto;
 }
 
 .square {
-    display: inline-block;
-    border: 1px solid #000;
-    height: 27px;
-    width: 27px;
-    background: #fff;
+    display: block;
+    background-color: #fff;
+
+}
+
+h1 {
+    text-align: center;
 }
